@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ProfilingTarget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectTarget>
+    <TargetProject>d3e0aeb7-408e-4453-a39a-ef8ae8443505</TargetProject>
+    <FriendlyName>Mazes</FriendlyName>
+  </ProjectTarget>
+  <Reports>
+    <Report>
+      <Filename>C:\Users\Igormal\AppData\Local\Temp\Mazes1_20180307.vsp</Filename>
+    </Report>
+  </Reports>
+</ProfilingTarget>
