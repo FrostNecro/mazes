@@ -38,4 +38,8 @@ class Mask:
         col = random.randint(0, self.columns - 1)
         if self.bits[row][col]:
             return [row, col]
+        else:
+            return self.random_location()
+
+    
 

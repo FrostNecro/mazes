@@ -54,8 +54,8 @@ class Grid:
     def each_cell(self):
         for row in self.each_row():
             for cell in row:
-                if cell:
-                    yield cell
+                if row[cell]:
+                    yield row[cell]
 
     def deadends(self):
         array = []

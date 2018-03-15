@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>d3e0aeb7-408e-4453-a39a-ef8ae8443505</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>simple_mask.py</StartupFile>
+    <StartupFile>ascii_mask.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,6 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ascii_mask.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="cell.py">
       <SubType>Code</SubType>
     </Compile>
@@ -52,6 +55,9 @@
     <Compile Include="simple_mask.py">
       <SubType>Code</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="mask.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
