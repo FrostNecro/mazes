@@ -8,7 +8,6 @@ startTime = time.time()
 grid = ColoredGrid(10, 10)
 
 Tree = algoritms.RecursiveBacktracker(grid).run()
-print(grid)
 finishTime = time.time()
 totalTime = finishTime - startTime
 print(totalTime)

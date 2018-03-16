@@ -1,7 +1,7 @@
-from grid import Grid
+from colored_grid import ColoredGrid
 from cell import Cell
 
-class MaskedGrid(Grid):
+class MaskedGrid(ColoredGrid):
     """description of class"""
     def __init__(self, mask):
         self.mask = mask

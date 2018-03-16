@@ -7,7 +7,7 @@ def from_txt(file):
     with open(file) as f:
         lines = f.readlines()
         rows = len(lines)
-        columns = len(lines[0])
+        columns = len(lines[0]) - 1
         mask = Mask(rows, columns)
 
         for row in range(rows):

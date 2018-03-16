@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>d3e0aeb7-408e-4453-a39a-ef8ae8443505</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>ascii_mask.py</StartupFile>
+    <StartupFile>image_mask.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -25,6 +25,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="cell.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="image_mask.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="masked_grid.py">
