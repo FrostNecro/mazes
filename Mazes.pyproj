@@ -55,6 +55,9 @@
     <Compile Include="atest.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="polar_grid.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="simple_mask.py">
       <SubType>Code</SubType>
     </Compile>

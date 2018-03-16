@@ -221,5 +221,4 @@ class WilsonsExt:
                 unvisited.pop(path[i])
                 #print(len(unvisited))
 
-        print(totalTime)
         return self.grid

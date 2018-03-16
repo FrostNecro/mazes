@@ -1,7 +1,8 @@
+from PIL import Image
 from mask import Mask
 from masked_grid import MaskedGrid
 from algoritms import *
-from PIL import Image
+
 
 def from_png(file):
     image = Image.open(file)
@@ -9,10 +10,10 @@ def from_png(file):
 
     for row in range(mask.rows):
         for col in range(mask.columns):
-             if image.getpixel((col,row)) == (0, 0, 0, 255):
-                mask[[row, col]] = False
-             else:
-                mask[[row, col]] = True
+            if image.getpixel((col, row)) == (0, 0, 0, 255):
+               mask[[row, col]] = False
+            else:
+               mask[[row, col]] = True
     return mask
 
 maskew = from_png("mask.png")

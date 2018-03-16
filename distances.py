@@ -25,7 +25,7 @@ class Distances:
         max_distance = 0
         max_cell = self.root
 
-        for cell in self.cells.keys():
+        for cell in self.cells:
             distance = self.cells[cell]
             if distance > max_distance:
                 max_cell = cell

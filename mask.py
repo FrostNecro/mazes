@@ -17,7 +17,7 @@ class Mask:
         if row in range(self.rows) and col in range(self.columns):
             return self.bits[row][col]
         else:
-            False
+            return False
 
     def __setitem__(self, rowcol, is_on):
         row = rowcol[0]
@@ -26,10 +26,10 @@ class Mask:
 
     def count(self):
         count = 0
-        for row in range(self.rows): 
+        for row in range(self.rows):
             for col in range(self.columns):
                 if self.bits[row][col]:
-                    count += 1 
+                    count += 1
 
         return count
 
@@ -54,6 +54,18 @@ class Mask:
                         mask[[row, col]] = False
                     else:
                         mask[[row, col]] = True
+        return mask
+
+    def from_png(self, file):
+        image = Image.open(file)
+        mask = Mask(image.height, image.width)
+
+        for row in range(mask.rows):
+            for col in range(mask.columns):
+                if image.getpixel((col,row)) == (0, 0, 0, 255):
+                   mask[[row, col]] = False
+                else:
+                   mask[[row, col]] = True
         return mask
 
     

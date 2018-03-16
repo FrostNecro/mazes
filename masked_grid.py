@@ -25,5 +25,3 @@ class MaskedGrid(ColoredGrid):
 
     def size(self):
         return self.mask.count()
-
-

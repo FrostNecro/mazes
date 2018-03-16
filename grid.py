@@ -1,7 +1,8 @@
+import json
 import random
 from PIL import Image, ImageDraw
 from cell import Cell
-import json
+
 
 class Grid:
     def __init__(self, rows, columns):
@@ -14,10 +15,10 @@ class Grid:
     def __getitem__(self, coords):
         row, column = coords
         if row not in range(self.rows):
-            return None 
+            return None
         if column not in range(self.columns):
             return None
-        
+
         return self.grid[row][column]
 
     def prepare_grid(self):
@@ -156,14 +157,14 @@ class Grid:
         if formated == "png":
             self.to_png(cell_size)
 
-    def appender(self, coordinates, id):
-        return {'type': 'Feature', 
-                            'geometry': {
-                                'type': 'LineString',
-                                'coordinates': coordinates},
-                            'properties': {
-                                'id': id
-                            }}
+    def appender(self, coordinates, ident):
+        return {'type': 'Feature',
+                'geometry': {
+                    'type': 'LineString',
+                    'coordinates': coordinates},
+                'properties': {
+                    'id': ident
+                }}
 
     def to_geosjson(self, cell_size=1000):
         features = []
@@ -176,7 +177,7 @@ class Grid:
             x2 = (cell.column + 1) * cell_size + xadd
             y2 = -(cell.row + 1) * cell_size + yadd
             if not cell.north:
-                coordinates = [[x1, y1],[x2, y1]]
+                coordinates = [[x1, y1], [x2, y1]]
                 features.append(self.appender(coordinates, id))
             if not cell.west:
                 coordinates = [[x1, y1], [x1, y2]]
@@ -192,4 +193,3 @@ class Grid:
         jstr = json.dumps(featCollection)
         with open("maze.json", 'w') as file:
             file.write(jstr)
-        
